@@ -1,0 +1,53 @@
+#sidebar {
+  width: fit-content;
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  align-self: end;
+  left: var(--sidebar-left-offset);
+  margin-bottom: -4rem; /* Makes the sidebar overlap the footer */
+  animation: moveIn 1s ease-out 0s 1 normal forwards;
+}
+
+@keyframes moveIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#sidebar svg {
+  height: 30px;
+  width: 30px;
+}
+
+.vertical-line {
+  width: 2px;
+  background-color: var(--text);
+}
+
+.line-long {
+  height: 15rem;
+  margin-top: 4px;
+}
+
+.line-short {
+  height: 5rem;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 992px) {
+  #sidebar {
+    display: none;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+}

@@ -1,0 +1,33 @@
+#footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: var(--body-sm);
+  color: var(--text);
+  align-self: center;
+}
+
+.copyright {
+  margin-bottom: 0.5rem;
+  flex: 0 0 100%;
+}
+
+#footer svg {
+  display: none;
+  flex: 1;
+  height: 25px;
+  width: 25px;
+  margin: 0 5px;
+}
+
+/* Display social icons on footer when sidebar is hidden */
+@media (max-width: 992px) {
+  #footer svg {
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+  }
+}
