@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef, useState, type SyntheticEvent } from "react";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import "./contact.css";
@@ -53,8 +55,12 @@ export default function ContactForm() {
     <section aria-labelledby="contact-title">
       <ToastContainer theme="dark" />
       <h2 id="contact-title" className="section-title">
-        Contact Me
+        Let's Chat
       </h2>
+      <p id="contact-description">
+        If you have a project in mind, or just want to say hi, feel free to reach out! Fill out the
+        form below and I'll get back to you as soon as possible.
+      </p>
       <form onSubmit={onSubmit} id="contact" ref={formRef}>
         <div className="form-group" id="name-group">
           <label htmlFor="input-name">Name</label>
