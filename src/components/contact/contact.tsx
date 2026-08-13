@@ -4,8 +4,10 @@ import { useRef, useState, type SyntheticEvent } from "react";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import "./contact.css";
 import { ToastContainer, toast } from "react-toastify";
+import { useResizeObserver } from "@/hooks/useResizeObserver";
 
 export default function ContactForm() {
+  const [sectionRef, dimensions] = useResizeObserver();
   const [error, setError] = useState("");
   const [captchaError, setCaptchaError] = useState("");
 
@@ -52,19 +54,26 @@ export default function ContactForm() {
   };
 
   return (
-    <section aria-labelledby="contact-title">
+    <section aria-labelledby="contact-title" ref={sectionRef}>
       <ToastContainer theme="dark" />
       <h2 id="contact-title" className="section-title">
-        Let's Chat
+        Contact Me
       </h2>
       <p id="contact-description">
-        If you have a project in mind, or just want to say hi, feel free to reach out! Fill out the
+        If you have a project in mind, or just want to say hi, feel free to reach out. Fill out the
         form below and I'll get back to you as soon as possible.
       </p>
       <form onSubmit={onSubmit} id="contact" ref={formRef}>
         <div className="form-group" id="name-group">
           <label htmlFor="input-name">Name</label>
-          <input type="text" name="name" id="input-name" placeholder="Your name..." required />
+          <input
+            type="text"
+            name="name"
+            id="input-name"
+            placeholder="Your name..."
+            autoComplete="name"
+            required
+          />
         </div>
         <div className="form-group" id="email-group">
           <label htmlFor="input-email">Email</label>
@@ -92,6 +101,7 @@ export default function ContactForm() {
             reCaptchaCompat={false}
             onVerify={onHCaptchaChange}
             theme="dark"
+            size={dimensions.width < 476 ? "compact" : "normal"}
           />
           {captchaError && <p className="captcha-error">{captchaError}</p>}
         </div>

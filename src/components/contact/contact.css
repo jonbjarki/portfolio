@@ -10,6 +10,17 @@
   margin: 0 1rem;
 }
 
+#contact-title {
+  margin-bottom: 0.5rem;
+}
+
+#contact-description {
+  margin-bottom: var(--title-margin);
+  margin-left: var(--title-left-margin);
+  max-inline-size: 60%;
+  color: var(--primary);
+}
+
 #name-group {
   grid-row: 1;
 }
@@ -83,17 +94,8 @@
 
 @media (max-width: 576px) {
   #contact {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, auto);
-  }
-
-  #email-group {
-    grid-row: 2;
-  }
-
-  #message-group {
-    grid-row: 3;
-    grid-column: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   #submit-group {

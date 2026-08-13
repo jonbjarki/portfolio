@@ -1,4 +1,4 @@
-header {
+#page-header {
   height: var(--header-height);
   width: var(--content-width);
   margin: 0 auto;
@@ -8,7 +8,7 @@ header {
   align-items: center;
 }
 
-header nav {
+#page-header nav {
   display: flex;
   flex-direction: row;
   gap: 1rem;

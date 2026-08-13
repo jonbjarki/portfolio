@@ -2,7 +2,7 @@ import "./header.css";
 
 export default function Header() {
   return (
-    <header>
+    <header id="page-header" role="banner">
       <div id="skip-link">
         <a href="#about">Skip to Main Content</a>
       </div>
