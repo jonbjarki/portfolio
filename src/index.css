@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +23,7 @@ button {
   /* Breakpoints: 1400, 1200, 992, 768, 576 */
 
   /* Typography scale (desktop baseline preserved) */
-  --h1: 5rem;
+  --h1: 4rem;
   --h2: 2rem;
   --h3: 1.6rem;
   --h4: 1.3rem;

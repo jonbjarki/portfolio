@@ -1,77 +1,89 @@
 #about {
-  --about-top-space: 8rem;
-  --about-text-measure: 60%;
-  --about-button-padding-y: 0.75rem;
-  --about-button-padding-x: 1.5rem;
-
   min-height: calc(100svh - var(--header-height));
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-@media (max-width: 1200px) {
-  #about {
-    --about-top-space: 11rem;
-  }
-}
-
-@media (max-width: 992px) {
-  #about {
-    --about-top-space: 9.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  #about {
-    --about-top-space: 8rem;
-    --about-text-measure: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  #about {
-    --about-top-space: 6.5rem;
-    --about-button-padding-y: 0.65rem;
-    --about-button-padding-x: 1.2rem;
-  }
+.about-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
 }
 
 #introduction {
   font-size: var(--h3);
   color: var(--primary);
-  margin-bottom: 1rem;
   margin-left: var(--title-left-margin);
 }
 
-#name {
-  font-size: var(--h1);
+#about-heading {
+  margin: 0;
+  line-height: 0.95;
+  font-size: clamp(3rem, 8vw, var(--h1));
   font-weight: 400;
-  margin-bottom: 0;
+  max-width: 100%;
+}
+
+.name {
+  display: block;
 }
 
 #title {
   font-size: var(--h2);
   font-weight: 400;
   color: var(--primary);
-  margin-bottom: 2rem;
+  margin: 0;
+  max-width: min(65ch, 60%);
 }
 
 #description {
   font-size: var(--body-lg);
   margin-bottom: 2rem;
-  max-inline-size: min(65ch, var(--about-text-measure));
+  max-inline-size: min(65ch, 60%);
 }
 
 #contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
   border: 1px solid var(--primary);
   color: var(--primary);
   border-radius: 0.5rem;
-  padding: var(--about-button-padding-y) var(--about-button-padding-x);
+  padding: 0.75rem 1.5rem;
   font-size: var(--button-text);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
-  &:hover {
-    background: rgb(from var(--primary) r g b / 0.1);
+#contact-btn:hover {
+  background: rgb(from var(--primary) r g b / 0.1);
+}
+
+#contact-btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 576px) {
+  #about-heading {
+    font-size: clamp(2.4rem, 13vw, 2.9rem);
+  }
+
+  #title {
+    max-width: 100%;
   }
 }
