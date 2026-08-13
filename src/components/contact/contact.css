@@ -1,4 +1,4 @@
-#contact {
+#contact-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, auto);
@@ -54,7 +54,7 @@
   font-family: inherit;
 }
 
-#contact textarea {
+#contact-form textarea {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid var(--border);
@@ -93,7 +93,7 @@
 }
 
 @media (max-width: 576px) {
-  #contact {
+  #contact-form {
     display: flex;
     flex-direction: column;
   }
@@ -104,5 +104,13 @@
     flex-direction: column;
     gap: 0.5rem;
     grid-column: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  #contact-description {
+    margin: 1rem auto;
+
+    max-inline-size: 80%;
   }
 }

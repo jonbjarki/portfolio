@@ -15,8 +15,8 @@
     --project-connector-dot-size: 0;
   }
 
-  .projects-body::after,
-  .projects-body::before {
+  .projects-card::after,
+  .projects-card::before {
     display: none;
   }
 }

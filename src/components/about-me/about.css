@@ -79,10 +79,6 @@
 }
 
 @media (max-width: 576px) {
-  #about-heading {
-    font-size: clamp(2.4rem, 13vw, 2.9rem);
-  }
-
   #title {
     max-width: 100%;
   }

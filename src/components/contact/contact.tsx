@@ -54,16 +54,16 @@ export default function ContactForm() {
   };
 
   return (
-    <section aria-labelledby="contact-title" ref={sectionRef}>
+    <section id="contact" aria-labelledby="contact-title" ref={sectionRef}>
       <ToastContainer theme="dark" />
       <h2 id="contact-title" className="section-title">
         Contact Me
       </h2>
-      <p id="contact-description">
+      <p id="contact-description" className="section-description">
         If you have a project in mind, or just want to say hi, feel free to reach out. Fill out the
         form below and I'll get back to you as soon as possible.
       </p>
-      <form onSubmit={onSubmit} id="contact" ref={formRef}>
+      <form onSubmit={onSubmit} id="contact-form" ref={formRef}>
         <div className="form-group" id="name-group">
           <label htmlFor="input-name">Name</label>
           <input
