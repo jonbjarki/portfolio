@@ -42,6 +42,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={calSans.className}>
       <head>
+        {/* Google tag (gtag.js) */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-ZD9GGX6RHW"></Script>
+        <Script id="google-analytics">
+          {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-ZD9GGX6RHW');
+            `}
+        </Script>
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
