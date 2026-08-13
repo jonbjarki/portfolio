@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "@/index.css";
 import { Cal_Sans } from "next/font/google";
 
@@ -42,21 +43,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={calSans.className}>
       <head>
-        {/* Google tag (gtag.js) */}
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-ZD9GGX6RHW"></Script>
-        <Script id="google-analytics">
-          {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'G-ZD9GGX6RHW');
-            `}
-        </Script>
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
         <div id="root">{children}</div>
+        <GoogleAnalytics gaId="G-ZD9GGX6RHW" />
         <Script src="https://web3forms.com/client/script.js" strategy="afterInteractive" />
       </body>
     </html>
