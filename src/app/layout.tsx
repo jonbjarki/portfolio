@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "As a full-stack software engineer, I work hard to build accessible, easy-to-use software that has a real impact on people's lives.",
   keywords: [
     "Jón Bjarki Gíslason",
+    "Jón Bjarki",
+    "Software Developer Iceland",
+    "Tölvunarfræðingur",
     "Full-Stack Software Engineer",
     "Software Developer",
     "Web Developer",
@@ -23,7 +26,8 @@ export const metadata: Metadata = {
     "Web Dev Portfolio",
     "Portfolio",
   ],
-  authors: [{ name: "Jón Bjarki Gíslason", url: "https://jonbjarki.github.io" }],
+  icons: "https://jonbjarki.net/favicon.ico",
+  authors: [{ name: "Jón Bjarki Gíslason", url: "https://jonbjarki.net" }],
   creator: "Jón Bjarki Gíslason",
   publisher: "Jón Bjarki Gíslason",
   openGraph: {
